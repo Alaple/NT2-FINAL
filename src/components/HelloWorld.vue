@@ -27,7 +27,7 @@ export default {
   filters : {
       codificado: function(value) {
         let valor = '';
-        value.toLowerCase().split('').forEach(element => {
+        value.split('').forEach(element => {
           switch (element) {
             case 'a':
               valor = valor + 'u'
@@ -40,6 +40,18 @@ export default {
               break;
             case 'u':
               valor = valor + 'a'
+              break;
+            case 'A':
+              valor = valor + 'U'
+              break;
+            case 'E':
+              valor = valor + 'O'
+              break;
+            case 'O':
+              valor = valor + 'E'
+              break;
+            case 'U':
+              valor = valor + 'A'
               break;
             default:
               valor = valor + element;
